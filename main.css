@@ -40,11 +40,22 @@ header {
     width: auto;
 }
 .grafiki {
-    padding: 100px 100px;
+    padding: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
     row-gap: 50px;
+    justify-items: center;
+}
+.grafiki img {
+    transition: all 0.2s ease-in-out 0s;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+.grafiki img:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid rgb(38, 93, 9);
 }
 .sekcja-2 {
     background-color: #FDF1EC;

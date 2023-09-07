@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #FDF1EC;
+    height: 200px;
+    width: auto;
+    padding: 70px 200px;
+    font-size: 50px;
+    text-align: end;
+}
+.sekcja-1 {
+    background-color: #FDF1EC;
+    height: 600px;
+    width: auto;
+}
+.sekcja-2 {
+    background-color: #F7D5D0;
+    height: 600px;
+    width: auto;
+}
+.sekcja-3 {
+    background-color: #F7E4E2;
+    height: 600px;
+    width: auto;
+}

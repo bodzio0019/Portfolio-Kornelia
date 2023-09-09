@@ -1,78 +1,98 @@
+/*  ROOT  */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Cormorant', serif;
+    margin: 0;
+    padding: 0;
 }
+
+/*  HEADER  */
+
 header {
     background-color: #FDF1EC;
     height: auto;
-    width: auto;
     position: relative;
+    width: auto;
 }
 .zdjecie {
     display: inline-block;
     height: auto;
-    width: 50%;
     padding: 100px;
+    width: 50%;
 }
 .zdjecie img {
     border-radius: 20px;
-    height: auto;
-    max-width: 411px;
     display: inline-block;
+    height: auto;
+    max-width: 411px; /* Jeśli ustawiamy konkretne px w zjdęciu, to blokujemy możliwość dostosowania rozmiaru przez przeglądarkę. W @media powinniśmy zmienić to na np. wartość procentową. */
     -webkit-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
     -moz-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
     box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
 }
 .imie {
     display: inline-block;
-    height: auto;
     font-size: 70px;
-    width: 50%;
-    position: absolute;
-    padding-top: 150px;
+    height: auto;
     letter-spacing: 0.5px;
+    padding-top: 150px;
+    position: absolute; /* To jest tylko po to, aby ułożył się ten element na górze rodzica, a nie na dole. */
+    width: 50%;
 }
+
+/*  SEKCJA-1  */
+
 .sekcja-1 {
     background-color: #F7D5D0;
     height: auto;
     width: auto;
 }
 .grafiki {
-    padding: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 50px;
     justify-items: center;
+    padding: 100px;
+    row-gap: 50px;
 }
 .grafiki img {
-    transition: all 0.2s ease-in-out 0s;
-    opacity: 0.7;
     border-radius: 10px;
     max-height: 300px;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out 0s;
 }
 .grafiki img:hover {
-    transform: scale(1.5);
-    opacity: 1;
-    z-index: 1;
     border: 1px solid rgb(38, 93, 9);
+    opacity: 1;
+    transform: scale(1.5);
+    z-index: 1;
 }
+
+/*  SEKCJA-2  */
+
 .sekcja-2 {
     background-color: #FDF1EC;
     height: 600px;
     width: auto;
 }
+
+/*  SEKCJA-3  */
+
 .sekcja-3 {
     background-color: #F7E4E2;
     height: 600px;
     width: auto;
 }
+
+/*  FOOTER  */
+
 footer {
     background-color: #f7e4e2bb;
     height: 200px;
     width: auto;
 }
+
+/*  @MEDIA  */
+
 @media screen and (max-width: 1000px){
     header {
         position: static;
@@ -80,32 +100,26 @@ footer {
     .zdjecie {
         display: flex;
         justify-content: center;
-        height: auto;
-        width: auto;
-        padding: 0;
         padding-top: 50px;
+        padding: 0;
+        width: auto;
     }
     .zdjecie img {
         max-width: 80%;
     }
     .imie {
+        align-items: center;
         display: block;
-        height: auto;
-        width: auto;
-        position: static;
         font-size: 50px;
         padding-top: 0;
         padding: 50px;
-        letter-spacing: 0.5px;
+        position: static;
         text-align: center;
-        align-items: center;
+        width: auto;
     }
     .grafiki {
         padding: 60px 60px;
-        display: grid;
         grid-template-columns: 1fr;
-        row-gap: 50px;
-        justify-items: center;
     }
     .grafiki img {
         max-width: 90%;

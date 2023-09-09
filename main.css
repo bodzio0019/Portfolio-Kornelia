@@ -12,11 +12,10 @@
 header {
     background-color: #FDF1EC;
     height: auto;
-    position: relative;
     width: auto;
+    display: flex;
 }
 .zdjecie {
-    display: inline-block;
     height: auto;
     padding: 100px;
     width: 50%;
@@ -30,14 +29,16 @@ header {
     -moz-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
     box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
 }
-.imie {
-    display: inline-block;
-    font-size: 70px;
+.opis-wrap {
     height: auto;
+    width: 50%;
+}
+.imie {
+    font-size: 70px;
     letter-spacing: 0.5px;
     padding-top: 150px;
-    position: absolute; /* To jest tylko po to, aby ułożył się ten element na górze rodzica, a nie na dole. */
-    width: 50%;
+}
+.opis {
 }
 
 /*  SEKCJA-1  */
@@ -95,7 +96,7 @@ footer {
 
 @media screen and (max-width: 480px){
     header {
-        position: static;
+        flex-direction: column;
     }
     .zdjecie {
         display: flex;
@@ -107,13 +108,14 @@ footer {
     .zdjecie img {
         max-width: 80%;
     }
+    .opis-wrap {
+        width: 100%;
+    }
     .imie {
         align-items: center;
-        display: block;
         font-size: 50px;
-        padding-top: 0;
         padding: 50px;
-        position: static;
+        padding-top: 30px;
         text-align: center;
         width: auto;
     }

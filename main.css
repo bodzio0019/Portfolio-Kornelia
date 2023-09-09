@@ -39,6 +39,9 @@ header {
     padding-top: 150px;
 }
 .opis {
+    font-size: 30px;
+    padding: 90px 150px 50px 50px;
+    text-align: justify;
 }
 
 /*  SEKCJA-1  */
@@ -125,5 +128,10 @@ footer {
     }
     .grafiki img {
         max-width: 90%;
+    }
+    .opis {
+        font-size: 30px;
+        padding: 10px 25px 50px 25px;
+        text-align: justify;
     }
 }

@@ -11,20 +11,27 @@
 
 header {
     background-color: #FDF1EC;
-    height: auto;
+    min-height: 880px;
     width: auto;
     display: flex;
 }
 .zdjecie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: auto;
-    padding: 100px;
+    padding-bottom: 100px;
     width: 50%;
+}
+.pusty {
+    height: 100px;
 }
 .zdjecie img {
     border-radius: 20px;
     display: inline-block;
     height: auto;
-    max-width: 411px; /* Jeśli ustawiamy konkretne px w zjdęciu, to blokujemy możliwość dostosowania rozmiaru przez przeglądarkę. W @media powinniśmy zmienić to na np. wartość procentową. */
+    width: 60%; /* Jeśli ustawiamy konkretne px w zjdęciu, to blokujemy możliwość dostosowania rozmiaru przez przeglądarkę. W @media powinniśmy zmienić to na np. wartość procentową. */
     -webkit-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
     -moz-box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
     box-shadow: -8px 8px 24px 0px rgba(66, 68, 90, 0.69);
@@ -37,6 +44,7 @@ header {
     font-size: 70px;
     letter-spacing: 0.5px;
     padding-top: 150px;
+    padding-right: 50px;
 }
 .opis {
     font-size: 30px;
@@ -96,20 +104,29 @@ footer {
 }
 
 /*  @MEDIA  */
-
-@media screen and (max-width: 480px){
+@media screen and (min-width: 901px) and (max-width: 1230px) {
+    .grafiki {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .grafiki {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1019px) {
     header {
         flex-direction: column;
     }
+    .pusty {
+        height: 50px;
+    }
     .zdjecie {
-        display: flex;
-        justify-content: center;
         padding: 0;
-        padding-top: 30px;
         width: auto;
     }
     .zdjecie img {
-        max-width: 80%;
+        width: 40%;
     }
     .opis-wrap {
         width: 100%;
@@ -119,6 +136,43 @@ footer {
         font-size: 50px;
         padding: 50px;
         padding-top: 30px;
+        margin-right: 0px;
+        text-align: center;
+        width: auto;
+    }
+    .grafiki {
+        padding: 60px 60px;
+    }
+    .grafiki img {
+        max-width: 90%;
+    }
+    .opis {
+        padding: 10px 25px 50px 25px;
+    }
+}
+@media screen and (max-width: 480px){
+    header {
+        flex-direction: column;
+    }
+    .pusty {
+        height: 30px;
+    }
+    .zdjecie {
+        padding: 0;
+        width: auto;
+    }
+    .zdjecie img {
+        width: 80%;
+    }
+    .opis-wrap {
+        width: 100%;
+    }
+    .imie {
+        align-items: center;
+        font-size: 50px;
+        padding: 50px;
+        padding-top: 30px;
+        margin-right: 0px;
         text-align: center;
         width: auto;
     }
@@ -130,8 +184,6 @@ footer {
         max-width: 90%;
     }
     .opis {
-        font-size: 30px;
         padding: 10px 25px 50px 25px;
-        text-align: justify;
     }
 }

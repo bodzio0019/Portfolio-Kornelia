@@ -5,7 +5,7 @@
     font-family: 'Cormorant', serif;
     margin: 0;
     padding: 0;
-    padding: env(safe-area-inset)
+    padding: env(safe-area-inset) /* to ustawia nam niezbędny padding, w razie, jakby notch miał nam przykryć content w iPhone. */
 }
 
 /*  HEADER  */

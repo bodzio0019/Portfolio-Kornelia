@@ -55,9 +55,9 @@ header {
     padding: 150px 50px 0px 50px;
 }
 .opis {
-    font-size: 30px;
+    font-size: 28px;
     padding: 90px 150px 50px 50px;
-    text-align: justify;
+    text-align: left;
 }
 
 /* || SEKCJA-1 || */
@@ -288,6 +288,7 @@ footer {
     }
     .opis {
         padding: 10px 25px 50px 25px;
+        font-size: 30px;
     }
     .imie {
         align-items: center;
@@ -319,6 +320,7 @@ footer {
         width: 100%;
     }
     .opis {
+        font-size: 25px;
         padding: 10px 25px 50px 25px;
     }
     .imie {

@@ -78,12 +78,10 @@ header {
 .grafiki img {
     border-radius: 10px;
     width: 85%;
-    opacity: 0.7;
     transition: all 0.2s ease-in-out 0s;
 }
 .grafiki img:hover {
     border: 1px solid rgb(38, 93, 9);
-    opacity: 1;
     transform: scale(1.27);
     z-index: 1;
 }
